@@ -5,7 +5,7 @@ This hobby project uses C to solve numeric puzzles as those proposed by Project 
 ## Table of contents
 
 **Project Euler problems:**
-[1](#project-euler-001-multiples-of-3-or-5), ..., [6](#project-euler-006-sum-square-difference).
+[1](#project-euler-001-multiples-of-3-or-5), ..., [5](#project-euler-005-smallest-multiple), [6](#project-euler-006-sum-square-difference).
 
 ## Project Euler 001: Multiples of 3 or 5
 
@@ -22,6 +22,22 @@ int main(int argc, [[maybe_unused]] char* argv[argc+1])
       }
   }
   printf("Solution: %llu\n", sum);
+  return EXIT_SUCCESS;
+}
+```
+
+## Project Euler 005: Smallest Multiple
+
+_2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?_ [(source)](https://projecteuler.net/problem=5)
+
+``` C
+int main(int argc, [[maybe_unused]] char* argv[argc+1])
+{
+  uint64_t res = 1;
+  for (uint64_t i = 1; i <= 20; i++) {
+    res = lcm(res, i);
+  }
+  printf("Solution: %llu\n", res);
   return EXIT_SUCCESS;
 }
 ```
