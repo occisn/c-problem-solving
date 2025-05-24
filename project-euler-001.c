@@ -3,8 +3,14 @@
 #include <stdint.h>
 #include <time.h>
 
-int project_euler_1 ()
-{
+/* To be compiled with:
+gcc project-euler-001.c -Wall -Wextra -Werror -O3 -std=c2x -pedantic -o project-euler-001 */
+
+/* Project Euler 1: Multiples of 3 or 5
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+https://projecteuler.net/problem=1 */   
+   
+int project_euler_1 () {
   uint64_t sum = 0;
   for (uint64_t i = 1; i < 1000; i++) {
     if ((i % 3 == 0) || (i % 5 == 0)) {
@@ -15,8 +21,7 @@ int project_euler_1 ()
   return EXIT_SUCCESS;
 }
 
-int main(int argc, [[maybe_unused]] char* argv[argc+1])
-{
+int main(int argc, [[maybe_unused]] char* argv[argc+1]) {
   struct timespec start, end;
   double duration;
   clock_gettime(CLOCK_MONOTONIC, &start);
