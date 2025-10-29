@@ -6,4 +6,6 @@ This is a personal, exploratory project with no fixed roadmap. Its aim is essent
 
 Project Euler : 1, 2, 5, 6, 9 
 
+Any comment? Open an [issue](https://github.com/occisn/c-problem-solving/issues), or start a discussion [here](https://github.com/occisn/c-problem-solving/discussions) or [at profile level](https://github.com/occisn/occisn/discussions).
+
 (end of README)
