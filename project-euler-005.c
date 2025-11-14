@@ -10,7 +10,8 @@ gcc project-euler-005.c -Wall -Wextra -Werror -O3 -std=c2x -pedantic -o project-
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 https://projecteuler.net/problem=5 */
 
-/* Function to calculate GCD */
+/* Function to calculate GCD
+ (v1 available in occisn/c-utils GitHub repository) */
 uint64_t gcd(uint64_t a, uint64_t b) {
     while (b != 0) {
         uint64_t temp = b;
@@ -20,12 +21,13 @@ uint64_t gcd(uint64_t a, uint64_t b) {
     return a;
 }
 
-/* Function to calculate LCM */
+/* Function to calculate LCM
+ (v1 available in occisn/c-utils GitHub repository) */
 uint64_t lcm(uint64_t a, uint64_t b) {
     return (a * b) / gcd(a, b);  
 }
 
-int project_euler_5() {
+int project_euler_5(void) {
   uint64_t res = 1;
   for (uint64_t i = 1; i <= 20; i++) {
     res = lcm(res, i);

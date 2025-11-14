@@ -22,7 +22,7 @@ uint64_t max(uint64_t a, uint64_t b) {
     return (a > b) ? a : b;
 }
 
-int project_euler_9() {
+int project_euler_9(void) {
   uint64_t n = 1000;
   uint64_t nbSolutions = 0;
   uint64_t res = 0;

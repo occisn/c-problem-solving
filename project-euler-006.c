@@ -16,7 +16,7 @@ Hence the difference between the sum of the squares of the first ten natural num
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.  
 https://projecteuler.net/problem=6 */
 
-int project_euler_6 () {
+int project_euler_6 (void) {
   uint64_t res = 0;
   for (uint64_t i = 1; i <= 100; i++) {
     res = res + i;
