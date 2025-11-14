@@ -1,20 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdint.h>
 #include <time.h>
-
-/* To be compiled with:
-gcc project-euler-005.c -Wall -Wextra -Werror -O3 -std=c2x -pedantic -o project-euler-005 */
-
-/* Project Euler 5: Smallest Multiple
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-https://projecteuler.net/problem=5 */
 
 /* Function to calculate GCD
  (v1 available in occisn/c-utils GitHub repository) */
-uint64_t gcd(uint64_t a, uint64_t b) {
+int gcd(int a, int b) {
     while (b != 0) {
-        uint64_t temp = b;
+        int temp = b;
         b = a % b;
         a = temp;
     }
@@ -23,16 +15,16 @@ uint64_t gcd(uint64_t a, uint64_t b) {
 
 /* Function to calculate LCM
  (v1 available in occisn/c-utils GitHub repository) */
-uint64_t lcm(uint64_t a, uint64_t b) {
+int lcm(int a, int b) {
     return (a * b) / gcd(a, b);  
 }
 
 int project_euler_5(void) {
-  uint64_t res = 1;
-  for (uint64_t i = 1; i <= 20; i++) {
+  int res = 1;
+  for (int i = 1; i <= 20; i++) {
     res = lcm(res, i);
   }
-  printf("Solution: %llu\n", res);
+  printf("Solution: %i\n", res);
   return EXIT_SUCCESS;
 }
 
