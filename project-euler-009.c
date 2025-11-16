@@ -11,7 +11,7 @@ int max(int a, int b) {
 }
 
 int project_euler_9(void) {
-  int n = 1000;
+  const int n = 1000;
   int nbSolutions = 0;
   int res = 0;
   for (int c = n; c >= 3; c--) {

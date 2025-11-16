@@ -3,11 +3,12 @@
 #include <time.h>
 
 int project_euler_2 (void) {
+  const int = 4000000;
   int f1 = 1;
   int f2 = 2;
   int sum = 2;
   int tmp = 0;
-  while (f2 <= 4000000) {
+  while (f2 <= n) {
     tmp = f2;
     f2 = f1 + f2;
     f1 = tmp;

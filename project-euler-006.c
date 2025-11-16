@@ -3,12 +3,13 @@
 #include <time.h>
 
 int project_euler_6 (void) {
+  const int n = 100;
   int res = 0;
-  for (int i = 1; i <= 100; i++) {
+  for (int i = 1; i <= n; i++) {
     res = res + i;
   }
   res = res * res;
-  for (int i = 1; i <= 100; i++) {
+  for (int i = 1; i <= n; i++) {
     res = res - i * i;
   }
   printf("Solution: %i\n", res);
