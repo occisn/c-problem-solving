@@ -2,16 +2,15 @@
 #include <stdio.h>
 #include <time.h>
 
-int min(int a, int b) {
+static inline int min(int a, int b) {
     return (a < b) ? a : b;
 }
 
-int max(int a, int b) {
+static inline int max(int a, int b) {
     return (a > b) ? a : b;
 }
 
-int project_euler_9(void) {
-  const int n = 1000;
+int project_euler_9(const int n) {
   int nbSolutions = 0;
   int res = 0;
   for (int c = n; c >= 3; c--) {
@@ -31,16 +30,19 @@ int project_euler_9(void) {
       }
     }
   }
-  printf("Solution: %i (%i solution)\n", res, nbSolutions);
+  printf("Solution: %d (%d solution)\n", res, nbSolutions);
   return EXIT_SUCCESS;
 }
 
-int main(int argc, [[maybe_unused]] char* argv[argc+1]) {
+int main(int argc, [[maybe_unused]] char *argv[argc + 1]) {
+
+  printf("\n");
+  
   struct timespec start, end;
   double duration;
   clock_gettime(CLOCK_MONOTONIC, &start);
 
-  project_euler_9();
+  project_euler_9(1000);
 
   clock_gettime(CLOCK_MONOTONIC, &end);
   duration = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;

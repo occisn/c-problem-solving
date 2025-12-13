@@ -1,25 +1,28 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
-int project_euler_1 (void) {
-  const int n = 1000;
+static int project_euler_1(const int n) {
   int sum = 0;
   for (int i = 1; i < n; i++) {
     if ((i % 3 == 0) || (i % 5 == 0)) {
-        sum += i;
-      }
+      sum += i;
+    }
   }
-  printf("Solution: %i\n", sum);
+  printf("Solution for n = %d: %d\n", n, sum);
   return EXIT_SUCCESS;
 }
 
-int main(int argc, [[maybe_unused]] char* argv[argc+1]) {
+int main(void) {
+
+  printf("\n");
+  project_euler_1(10);
+  
   struct timespec start, end;
   double duration;
   clock_gettime(CLOCK_MONOTONIC, &start);
 
-  project_euler_1();
+  project_euler_1(1000);
 
   clock_gettime(CLOCK_MONOTONIC, &end);
   duration = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
