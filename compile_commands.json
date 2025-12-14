@@ -1,0 +1,154 @@
+[
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/main.c",
+   "-o",
+   "build/main.o"
+  ],
+  "file": "src/main.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_001.c",
+   "-o",
+   "build/project_euler_001.o"
+  ],
+  "file": "src/project_euler_001.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_002.c",
+   "-o",
+   "build/project_euler_002.o"
+  ],
+  "file": "src/project_euler_002.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_003.c",
+   "-o",
+   "build/project_euler_003.o"
+  ],
+  "file": "src/project_euler_003.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_005.c",
+   "-o",
+   "build/project_euler_005.o"
+  ],
+  "file": "src/project_euler_005.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_006.c",
+   "-o",
+   "build/project_euler_006.o"
+  ],
+  "file": "src/project_euler_006.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_009.c",
+   "-o",
+   "build/project_euler_009.o"
+  ],
+  "file": "src/project_euler_009.c"
+ },
+ {
+  "directory": "c:\\Users\\nicol\\Dropbox\\local-repos\\c-problem-solving",
+  "arguments": [
+   "gcc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pedantic",
+   "-std=c2x",
+   "-O3",
+   "-Isrc",
+   "-Itests/unity",
+   "-c",
+   "src/project_euler_010.c",
+   "-o",
+   "build/project_euler_010.o"
+  ],
+  "file": "src/project_euler_010.c"
+ }
+]
