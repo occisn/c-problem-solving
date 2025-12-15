@@ -69,6 +69,10 @@ static uint64_t largest_prime_factor__uint64(uint64_t n)
 int64_t project_euler_003(const uint64_t n) // n = 600851475143
 {
   uint64_t solution = largest_prime_factor__uint64(n);
+  if (solution == 0) {
+    printf("largest_prime_factor called with a parameter < 2\n");
+    return 0;
+  }
   return solution;
 }
 

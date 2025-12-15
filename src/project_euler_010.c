@@ -47,7 +47,7 @@ uint64_t project_euler_010(const uint64_t n) // n = 2M
   bool *is_prime = sieve_eratosthenes__uint64(n);
 
   if (is_prime == NULL) {
-    printf("Memory allocation failed or n < 2\n");
+    printf("sieve_eratosthenes: memory allocation failed or n < 2\n");
     return EXIT_FAILURE;
   }
 
