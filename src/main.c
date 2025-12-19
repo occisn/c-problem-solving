@@ -1,6 +1,7 @@
 #include "project_euler_001.h"
 #include "project_euler_002.h"
 #include "project_euler_003.h"
+#include "project_euler_004.h"
 #include "project_euler_005.h"
 #include "project_euler_006.h"
 #include "project_euler_009.h"
@@ -21,6 +22,7 @@ int main(void)
   printf("Project Euler 001: %d\n", project_euler_001(1000));
   printf("Project Euler 002: %d\n", project_euler_002(4000000));
   printf("Project Euler 003: %" PRIu64 "\n", project_euler_003(600851475143));
+  printf("Project Euler 004: %d\n", project_euler_004());
   printf("Project Euler 005: %d\n", project_euler_005(20));
   printf("Project Euler 006: %d\n", project_euler_006(100));
   printf("Project Euler 009: %d\n", project_euler_009(1000));
