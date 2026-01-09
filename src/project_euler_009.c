@@ -13,8 +13,7 @@ static inline int max(int a, int b)
 
 int project_euler_009(const int n) // n = 1000
 {
-  int nbSolutions = 0;
-  int res = 0;
+   int res = 0;
   for (int c = n; c >= 3; c--) {
     // upper limit for b:
     //   (i) b < c
@@ -27,8 +26,7 @@ int project_euler_009(const int n) // n = 1000
     for (int b = bmax; b >= bmin; b--) {
       int a = n - b - c;
       if (c * c == a * a + b * b) {
-        nbSolutions++;
-        res = a * b * c;
+         res = a * b * c;
       }
     }
   }
