@@ -1,6 +1,5 @@
-#ifndef PROJECT_EULER_009_H
-#define PROJECT_EULER_009_H
+#pragma once
 
 int project_euler_009(const int n);
 
-#endif // PROJECT_EULER_009_H
+// end
