@@ -5,7 +5,7 @@
 /* Function to calculate GCD
    a and b shall be positive
  (v1 available in occisn/c-utils GitHub repository) */
-static int gcd__int(int a, int b)
+static int gcd_int(int a, int b)
 {
   while (b != 0) {
     int temp = b;
@@ -17,20 +17,20 @@ static int gcd__int(int a, int b)
 
 /* Function to calculate LCM
    a and b shall be positive
-   Requires gcd__int()
+   Requires gcd_int()
  (v2 available in occisn/c-utils GitHub repository) */
-static int lcm__int(int a, int b)
+static int lcm_int(int a, int b)
 {
   if (a == 0 || b == 0)
     return 0;
-  return (int)((int64_t)a * b / gcd__int(a, b));
+  return (int)((int64_t)a * b / gcd_int(a, b));
 }
 
 int project_euler_005(const int n) // n = 20
 {
   int res = 1;
   for (int i = 1; i <= n; i++) {
-    res = lcm__int(res, i);
+    res = lcm_int(res, i);
   }
   return res;
 }

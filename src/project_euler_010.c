@@ -6,25 +6,22 @@
 #include <time.h>
 
 /**
- * Computes the Sieve of Eratosthenes up to n (exclusive)
+ * Populate the Sieve of Eratosthenes up to n (exclusive)
  * and counts the number of primes.
  *
- * @param n         Upper limit (exclusive)
- * @return Pointer to dynamically allocated bool array where:
- *         is_prime[i] == true if i is prime, false otherwise.
- *         Returns NULL if n < 2 or memory allocation fails.
- *         Caller is responsible for freeing the array.
+ * Array is created by the caller
  *
- * (v1 available in occisn/c-utils GitHub repository)
+ * Return true/false if success/failure
+ *
+ * (v2 available in occisn/c-utils GitHub repository)
  */
-static bool *sieve_eratosthenes__uint64(uint64_t n)
+bool populate_sieve_eratosthenes_uint64(bool *is_prime, const uint64_t n)
 {
-  if (n < 2)
-    return NULL;
+  if (n < 1)
+    return false;
 
-  bool *is_prime = malloc(n * sizeof(bool));
-  if (!is_prime)
-    return NULL;
+  if (is_prime == NULL)
+    return false;
 
   for (uint64_t i = 0; i < n; i++)
     is_prime[i] = true;
@@ -39,18 +36,24 @@ static bool *sieve_eratosthenes__uint64(uint64_t n)
     }
   }
 
-  return is_prime;
+  return true;
 }
+
 
 uint64_t project_euler_010(const uint64_t n) // n = 2M
 {
-  bool *is_prime = sieve_eratosthenes__uint64(n);
-
+  bool *is_prime = malloc(n * sizeof *is_prime);
   if (is_prime == NULL) {
-    printf("sieve_eratosthenes: memory allocation failed or n < 2\n");
-    return EXIT_FAILURE;
+    printf("Problem in malloc\n");
+    return 0;
   }
 
+  if (!populate_sieve_eratosthenes_uint64(is_prime, n)) {
+    printf("Problem in populate_sieve_eratosthenes_uint64\n");
+    free(is_prime);
+    return 0;
+  }
+    
   uint64_t sum = 0;
   for (size_t i = 0; i < n; i++) {
     if (is_prime[i]) {

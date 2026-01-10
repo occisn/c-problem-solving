@@ -1,23 +1,14 @@
+#include <assert.h>
 #include <stdlib.h>
 
 /**
- * @brief Reverses the digits of a non-negative integer.
- *
- * This function takes a non-negative integer `n` and returns a new integer
- * whose digits are in reverse order.
- *
- * Examples:
- *   reverse_number(123)   -> 321
- *   reverse_number(1000)  -> 1
- *   reverse_number(0)     -> 0
- *
- * @param n Non-negative integer to reverse
- * @return Reversed integer
+ * Reverse the digits of a non-negative integer.
  *
  * (v1 available in occisn/c-utils GitHub repository, 2025-12-19)
  */
-int reverse_number(int n)
+static int reverse_number_int(int n)
 {
+  assert(n >= 0);
   int reversed = 0;
   while (n > 0) {
     reversed = reversed * 10 + (n % 10);
@@ -25,6 +16,7 @@ int reverse_number(int n)
   }
   return reversed;
 }
+
 
 int project_euler_004(void)
 {
@@ -35,7 +27,7 @@ int project_euler_004(void)
       if (product <= max_palindrome) {
         break;
       }
-      if (product == reverse_number(product)) {
+      if (product == reverse_number_int(product)) {
         max_palindrome = product;
       }
     }

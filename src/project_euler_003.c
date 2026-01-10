@@ -3,29 +3,18 @@
 #include <stdlib.h>
 
 /**
- * Finds the largest prime factor of a given unsigned 64-bit integer.
+ * Finds the largest prime factor of an integer
  *
- * This function uses an optimized trial division algorithm:
- * 1. First removes all factors of 2 (the only even prime)
- * 2. Then removes all factors of 3
- * 3. Finally checks only numbers of the form 6k±1 (where k ≥ 1), since all
- *    primes greater than 3 can be expressed in this form
- *
- * The algorithm repeatedly divides n by each prime factor found, effectively
- * computing the complete prime factorization while only tracking the largest.
- *
- * @param n The number to factorize (must be a positive integer)
- *
- * @return The largest prime factor of n.
- * Special case: returns 0 if n is 0 or 1 (no prime factors exist)
- *
- * @example
- *   largest_prime_factor__uint64(28)      returns 7   (28 = 2² × 7)
+ * Special case: returns 0 if n < 2
  *
  * (v1 available in occisn/c-utils GitHub repository)
  */
-static uint64_t largest_prime_factor__uint64(uint64_t n)
+static uint64_t largest_prime_factor_uint64(uint64_t n)
 {
+  if (n < 2) {
+    return 0;
+  }
+
   uint64_t largest = 0;
 
   // Remove all factors of 2
@@ -43,7 +32,7 @@ static uint64_t largest_prime_factor__uint64(uint64_t n)
   // Now n is odd and not divisible by 3.
   // Test divisors of the form 6k-1 and 6k+1.
   uint64_t i = 5;
-  while (i <= n / i) { // to avoid overflow
+  while (i * i <= n) {
 
     // Check i = 6k - 1
     if (n % i == 0) {
@@ -68,9 +57,9 @@ static uint64_t largest_prime_factor__uint64(uint64_t n)
 
 int64_t project_euler_003(const uint64_t n) // n = 600851475143
 {
-  uint64_t solution = largest_prime_factor__uint64(n);
+  uint64_t solution = largest_prime_factor_uint64(n);
   if (solution == 0) {
-    printf("largest_prime_factor called with a parameter < 2\n");
+    printf("Problem with largest_prime_factor_uint64\n");
     return 0;
   }
   return solution;
