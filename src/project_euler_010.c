@@ -44,12 +44,12 @@ uint64_t project_euler_010(const uint64_t n) // n = 2M
 {
   bool *is_prime = malloc(n * sizeof *is_prime);
   if (is_prime == NULL) {
-    printf("Problem in malloc\n");
+    perror("Problem in malloc\n");
     return 0;
   }
 
   if (!populate_sieve_eratosthenes_uint64(is_prime, n)) {
-    printf("Problem in populate_sieve_eratosthenes_uint64\n");
+    perror("Problem in populate_sieve_eratosthenes_uint64\n");
     free(is_prime);
     return 0;
   }
