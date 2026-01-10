@@ -1,6 +1,5 @@
-#include <stdint.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 /* Function to calculate GCD
    a and b shall be positive

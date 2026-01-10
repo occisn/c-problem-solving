@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 static inline int min(const int a, const int b)

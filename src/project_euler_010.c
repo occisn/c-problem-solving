@@ -1,9 +1,9 @@
 #include <inttypes.h> // for PRIu64
 #include <math.h>     // for sqrtl
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 /**
  * Populate the Sieve of Eratosthenes up to n (exclusive)
@@ -15,7 +15,7 @@
  *
  * (v2 available in occisn/c-utils GitHub repository)
  */
-bool populate_sieve_eratosthenes_uint64(bool *is_prime, const uint64_t n)
+static bool populate_sieve_eratosthenes_uint64(bool *is_prime, const uint64_t n)
 {
   if (n < 1)
     return false;

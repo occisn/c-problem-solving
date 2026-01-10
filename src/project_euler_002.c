@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 int project_euler_002(const int n) // n = 4 M

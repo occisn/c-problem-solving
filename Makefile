@@ -4,7 +4,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=c2x -O3 \
          -Isrc -Itests/unity
-LDFLAGS =
+LDFLAGS = 
 
 # ---------------------------------------------------------
 # DIRECTORIES

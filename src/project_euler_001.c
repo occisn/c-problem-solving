@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 int project_euler_001(const int n) // n = 1000

@@ -1,5 +1,5 @@
-#include <assert.h>
 #include <stdlib.h>
+#include <assert.h>
 
 /**
  * Reverse the digits of a non-negative integer.

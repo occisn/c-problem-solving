@@ -1,3 +1,7 @@
+#include <inttypes.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "project_euler_001.h"
 #include "project_euler_002.h"
 #include "project_euler_003.h"
@@ -6,10 +10,6 @@
 #include "project_euler_006.h"
 #include "project_euler_009.h"
 #include "project_euler_010.h"
-#include <inttypes.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 int main(void)
 {
