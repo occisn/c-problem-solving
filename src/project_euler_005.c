@@ -25,7 +25,7 @@ static int lcm_int(int a, int b)
   return (int)((int64_t)a * b / gcd_int(a, b));
 }
 
-int project_euler_005(const int n) // n = 20
+int project_euler_005(int n) // n = 20
 {
   int res = 1;
   for (int i = 1; i <= n; i++) {

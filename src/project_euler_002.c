@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int project_euler_002(const int n) // n = 4 M
+int project_euler_002(int n) // n = 4 M
 {
   int f1 = 1;
   int f2 = 2;

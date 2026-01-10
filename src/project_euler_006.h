@@ -1,5 +1,5 @@
 #pragma once
 
-int project_euler_006(const int n);
+int project_euler_006(int n);
 
 // end

@@ -15,7 +15,7 @@
  *
  * (v2 available in occisn/c-utils GitHub repository)
  */
-static bool populate_sieve_eratosthenes_uint64(bool *is_prime, const uint64_t n)
+static bool populate_sieve_eratosthenes_uint64(bool *is_prime, uint64_t n)
 {
   if (n < 1)
     return false;
@@ -40,7 +40,7 @@ static bool populate_sieve_eratosthenes_uint64(bool *is_prime, const uint64_t n)
 }
 
 
-uint64_t project_euler_010(const uint64_t n) // n = 2M
+uint64_t project_euler_010(uint64_t n) // n = 2M
 {
   bool *is_prime = malloc(n * sizeof *is_prime);
   if (is_prime == NULL) {

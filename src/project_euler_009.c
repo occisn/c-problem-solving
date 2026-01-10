@@ -1,16 +1,16 @@
 #include <stdlib.h>
 
-static inline int min(const int a, const int b)
+static inline int min(int a, int b)
 {
   return (a < b) ? a : b;
 }
 
-static inline int max(const int a, const int b)
+static inline int max(int a, int b)
 {
   return (a > b) ? a : b;
 }
 
-int project_euler_009(const int n) // n = 1000
+int project_euler_009(int n) // n = 1000
 {
    int res = 0;
   for (int c = n; c >= 3; c--) {
