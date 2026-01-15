@@ -9,6 +9,7 @@
 #include "project_euler_005.h"
 #include "project_euler_006.h"
 #include "project_euler_007.h"
+#include "project_euler_008.h"
 #include "project_euler_009.h"
 #include "project_euler_010.h"
 
@@ -27,6 +28,7 @@ int main(void)
   printf("Project Euler 005: %d\n", project_euler_005(20));
   printf("Project Euler 006: %d\n", project_euler_006(100));
   printf("Project Euler 007: %d\n", project_euler_007(10001));
+  printf("Project Euler 008: %" PRIu64 "\n", project_euler_008(13));
   printf("Project Euler 009: %d\n", project_euler_009(1000));
   printf("Project Euler 010: %" PRIu64 "\n", project_euler_010(2000000));
 
