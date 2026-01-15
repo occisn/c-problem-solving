@@ -5,6 +5,7 @@ void test_project_euler_002(void);
 void test_project_euler_003(void);
 void test_project_euler_005(void);
 void test_project_euler_006(void);
+void test_project_euler_007(void);
 void test_project_euler_009(void);
 void test_project_euler_010(void);
 
@@ -24,6 +25,7 @@ int main(void) {
   RUN_TEST(test_project_euler_003);
   RUN_TEST(test_project_euler_005);
   RUN_TEST(test_project_euler_006);
+  RUN_TEST(test_project_euler_007);
   RUN_TEST(test_project_euler_009);
   RUN_TEST(test_project_euler_010);
 
