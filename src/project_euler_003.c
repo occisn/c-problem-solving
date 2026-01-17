@@ -59,7 +59,7 @@ uint64_t project_euler_003(uint64_t n) // n = 600851475143
 {
   uint64_t solution = largest_prime_factor_uint64(n);
   if (solution == 0) {
-    perror("Problem with largest_prime_factor_uint64\n");
+    fprintf(stderr, "Problem with largest_prime_factor_uint64\n");
     return 0;
   }
   return solution;

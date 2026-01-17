@@ -58,13 +58,13 @@ bool nth_prime_uint64(uint64_t n, uint64_t *result)
 
   bool *is_prime = malloc(limit * sizeof *is_prime);
   if (is_prime == NULL) {
-    perror("Problem in malloc.\n");
+    fprintf(stderr, "Problem in malloc.\n");
     return false;
   }
 
   // populate sieve
   if (!populate_sieve_eratosthenes_uint64(is_prime, limit)) {
-    perror("Problem in populate_sieve_eratosthenes_uint64.\n");
+    fprintf(stderr, "Problem in populate_sieve_eratosthenes_uint64.\n");
     goto failure;
   }
 
@@ -98,7 +98,7 @@ bool SHOW_nth_prime_uint64(void)
   const uint64_t n = 1000;
   uint64_t nth_prime;
   if (!nth_prime_uint64(n, &nth_prime)) {
-    perror("Problem with nth_prime_uint64\n");
+    fprintf(stderr, "Problem with nth_prime_uint64\n");
     return false;
   }
   printf("%" PRIu64 "-th prime is %" PRIu64 "\n", n, nth_prime);
@@ -109,7 +109,7 @@ int project_euler_007(int n)
 {
   uint64_t nth_prime;
   if (!nth_prime_uint64(n, &nth_prime)) {
-    perror("Problem with nth_prime_uint64\n");
+    fprintf(stderr, "Problem with nth_prime_uint64\n");
     return 0;
   }
   return nth_prime;
