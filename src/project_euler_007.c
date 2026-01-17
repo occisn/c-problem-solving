@@ -1,9 +1,10 @@
 #include <inttypes.h>
 #include <math.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * Populate the Sieve of Eratosthenes up to n (exclusive)
@@ -15,7 +16,7 @@
  *
  * (v2 available in occisn/c-utils GitHub repository)
  */
-bool populate_sieve_eratosthenes_uint64(bool *is_prime, uint64_t n)
+static bool populate_sieve_eratosthenes_uint64(bool *is_prime, uint64_t n)
 {
   if (n < 1)
     return false;
@@ -46,7 +47,7 @@ bool populate_sieve_eratosthenes_uint64(bool *is_prime, uint64_t n)
  *
  * (v2 available in occisn/c-utils GitHub repository)
  */
-bool nth_prime_uint64(uint64_t n, uint64_t *result)
+static bool nth_prime_uint64(uint64_t n, uint64_t *result)
 {
   if (n < 1 || result == NULL) {
     return false;
@@ -93,7 +94,7 @@ failure:
   return true;
 }
 
-bool SHOW_nth_prime_uint64(void)
+static bool SHOW_nth_prime_uint64(void)
 {
   const uint64_t n = 1000;
   uint64_t nth_prime;
